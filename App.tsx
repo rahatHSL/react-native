@@ -1,38 +1,33 @@
-import React from 'react';
-import {
-  View,
-  SafeAreaView,
-  Text,
-  Button,
-  TextInput,
-  StyleSheet,
-} from 'react-native';
+import React from 'react'
+import { View, SafeAreaView, Text, StyleSheet, ScrollView } from 'react-native'
+import { Rounded } from './assets/styles/common'
 
 function App(): Element {
   return (
     <SafeAreaView>
-      <View>
-        <Text>hi</Text>
-        <Text>hi</Text>
-        <Text>hi</Text>
-        <Text>font site is so small please make it bold</Text>
-        <TextInput
-          aria-label="input type"
-          placeholder="please input your name"
-        />
-        <Text style={styles.pureCenter}>hi</Text>
-        <View>
-          <Button title="click me" color={'green'} />
-        </View>
-      </View>
+      <ScrollView>
+        <ScrollView horizontal={true}>
+          <View style={styles.component}>
+            <Rounded color={'red'} />
+            <Rounded color={'blue'} />
+            <Rounded color={'purple'} />
+            <Rounded color={'red'} />
+            <Rounded color={'blue'} />
+            <Rounded color={'purple'} />
+          </View>
+        </ScrollView>
+      </ScrollView>
     </SafeAreaView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
-  pureCenter: {
-    color: 'red',
+  component: {
+    height: 759,
+    backgroundColor: 'green',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
   },
-});
+})
 
-export default App;
+export default App
