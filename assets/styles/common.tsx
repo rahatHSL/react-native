@@ -3,14 +3,15 @@ import { ColorValue, Text, View } from 'react-native'
 
 interface RoundProps {
   color: ColorValue
+  text: string
 }
 
-export const Rounded: React.FC<RoundProps> = ({ color }) => {
+export const Rounded: React.FC<RoundProps> = ({ color, text }) => {
   return (
     <View
       style={{
-        width: 100,
-        height: 100,
+        width: 90,
+        height: 90,
         borderRadius: 10,
         backgroundColor: color,
         justifyContent: 'center',
@@ -18,7 +19,7 @@ export const Rounded: React.FC<RoundProps> = ({ color }) => {
         margin: 4,
       }}
     >
-      <Text style={{ color: 'white' }}>new</Text>
+      <Text style={{ color: 'white' }}>{text}</Text>
     </View>
   )
 }
